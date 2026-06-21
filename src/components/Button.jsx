@@ -9,7 +9,7 @@ export default function Button({ children, href = '#', variant = 'primary', icon
   return (
     <a
       href={href}
-      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-extrabold uppercase tracking-[0.16em] transition duration-300 hover:-translate-y-1 ${styles}`}
+      className={`inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-xs font-extrabold uppercase tracking-[0.08em] transition duration-300 hover:-translate-y-1 sm:w-auto sm:px-6 sm:text-sm sm:tracking-[0.16em] ${styles}`}
     >
       <span>{children}</span>
       <Icon className="h-4 w-4" aria-hidden="true" />
