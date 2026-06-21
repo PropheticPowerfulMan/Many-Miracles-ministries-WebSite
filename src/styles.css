@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #fff8e6;
+  background: #050812;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(18, 63, 117, 0.65), transparent 32rem),
+    radial-gradient(circle at 85% 20%, rgba(248, 199, 90, 0.22), transparent 28rem),
+    linear-gradient(180deg, #050812 0%, #081631 45%, #050812 100%);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  color: #050812;
+  background: #f8c75a;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #fff8e6 0%, #f8c75a 35%, #d88925 70%, #fff0b8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass-panel {
+  border: 1px solid rgba(248, 199, 90, 0.18);
+  background: linear-gradient(145deg, rgba(7, 17, 37, 0.88), rgba(5, 8, 18, 0.72));
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(18px);
+}
+
+.divine-border {
+  position: relative;
+}
+
+.divine-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(248, 199, 90, 0.7), rgba(255, 255, 255, 0.08), rgba(18, 63, 117, 0.6));
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.light-rays {
+  background:
+    linear-gradient(105deg, transparent 0 38%, rgba(248, 199, 90, 0.22) 40%, transparent 45%),
+    linear-gradient(72deg, transparent 0 48%, rgba(255, 255, 255, 0.1) 50%, transparent 55%),
+    linear-gradient(130deg, transparent 0 57%, rgba(248, 199, 90, 0.16) 59%, transparent 64%);
+}
+
+.field {
+  @apply w-full rounded-lg border border-gold/20 bg-white/5 px-4 py-3 text-sm text-ivory outline-none transition placeholder:text-ivory/45 focus:border-gold/70 focus:bg-white/10 focus:ring-2 focus:ring-gold/20;
+}
+
+.icon-button {
+  @apply inline-flex h-11 w-11 items-center justify-center rounded-full border border-gold/25 bg-white/5 text-gold transition hover:-translate-y-0.5 hover:border-gold/60 hover:bg-gold/10;
+}
